@@ -43,165 +43,40 @@ class TVCardServices extends LitElement {
     return html`
       ${this.renderStyle()}
       <ha-card .header="${this._config.name}">
-          <div class="row">
+        <div class="row"></div>
+        
+        <div class="row">
+          <paper-icon-button 
+            .action="${"power"}" 
+            @click="${this.handleActionClick}" 
+            icon="mdi:power"
+            title="Power"
+          ></paper-icon-button>
+          <paper-icon-button
+            .action="${"volume_down"}"
+            @click="${this.handleActionClick}"
+            icon="mdi:volume-medium"
+            title="Volume -"
+          ></paper-icon-button>
+          <paper-icon-button
+            .action="${"volume_up"}"
+            @click="${this.handleActionClick}"
+            icon="mdi:volume-high"
+            title="Volume +"
+          ></paper-icon-button>
 
-          </div>
-          <div class="row">
-            <paper-icon-button
-              .action="${"power"}"
-              @click="${this.handleActionClick}"
-              icon="mdi:power"
-              title="Power"
-            ></paper-icon-button>
-            <paper-icon-button
-              .action="${""}"
-              @click="${this.handleActionClick}"
-              icon=""
-              title=""
-            ></paper-icon-button>
-            <paper-icon-button
-              .action="${"power"}"
-              @click="${this.handleActionClick}"
-              icon="mdi:power"
-              title="Power"
-            ></paper-icon-button>
-
-          </div>
-          <div class="row">
-            <paper-icon-button
-              .action="${"back"}"
-              @click="${this.handleActionClick}"
-              icon="mdi:arrow-left"
-              title="Back"
-            ></paper-icon-button>
-            <paper-icon-button
-              .action="${"source"}"
-              @click="${this.handleActionClick}"
-              icon="mdi:video-input-hdmi"
-              title="Source"
-            ></paper-icon-button>
-            <paper-icon-button
-              .action="${"home"}"
-              @click="${this.handleActionClick}"
-              icon="mdi:home"
-              title="Home"
-            ></paper-icon-button>
-
-
-          </div>
-
-          <div class="row">
-            <paper-icon-button
-              .action="${"channelup"}"
-              @click="${this.handleActionClick}"
-              icon="mdi:arrow-up"
-              title="Channelup"
-            ></paper-icon-button>
-            <paper-icon-button
-              .action="${"info"}"
-              @click="${this.handleActionClick}"
-              icon="mdi:television-guide"
-              title="Guide"
-            ></paper-icon-button>
-            <paper-icon-button
-              .action="${"channeldown"}"
-              @click="${this.handleActionClick}"
-              icon="mdi:arrow-down"
-              title="Channeldown"
-            ></paper-icon-button>
-
-          </div>
-
-          <div class="row">
-            <paper-icon-button
-              .action="${"up"}"
-              @click="${this.handleActionClick}"
-              icon="mdi:chevron-up"
-              title="Up"
-            ></paper-icon-button>
-          </div>
-
-          <div class="row">
-            <paper-icon-button
-              .action="${"left"}"
-              @click="${this.handleActionClick}"
-              icon="mdi:chevron-left"
-              title="Left"
-            ></paper-icon-button>
-            <paper-icon-button
-              .action="${"select"}"
-              @click="${this.handleActionClick}"
-              icon="mdi:checkbox-blank-circle"
-              title="Select"
-            ></paper-icon-button>
-            <paper-icon-button
-              .action="${"right"}"
-              @click="${this.handleActionClick}"
-              icon="mdi:chevron-right"
-              title="Right"
-            ></paper-icon-button>
-          </div>
-
-          <div class="row">
-            <paper-icon-button
-              .action="${"down"}"
-              @click="${this.handleActionClick}"
-              icon="mdi:chevron-down"
-              title="Down"
-            ></paper-icon-button>
-          </div>
-
-          <div class="row">
-            <paper-icon-button
-              .action="${"reverse"}"
-              @click="${this.handleActionClick}"
-              icon="mdi:rewind"
-              title="Rewind"
-            ></paper-icon-button>
-            <paper-icon-button
-              .action="${"play"}"
-              @click="${this.handleActionClick}"
-              icon="mdi:play-pause"
-              title="Play/Pause"
-            ></paper-icon-button>
-            <paper-icon-button
-              .action="${"forward"}"
-              @click="${this.handleActionClick}"
-              icon="mdi:fast-forward"
-              title="Fast-Forward"
-            ></paper-icon-button>
-          </div>
-
-          ${
-            this._config.tv ||
-            this._config.volume_up ||
-            this._config.volume_down ||
-            this._config.volume_mute
-              ? html`
-                  <div class="row">
-                    <paper-icon-button
-                      .action="${"volume_mute"}"
-                      @click="${this.handleActionClick}"
-                      icon="mdi:volume-mute"
-                      title="Volume Mute"
-                    ></paper-icon-button>
-                    <paper-icon-button
-                      .action="${"volume_down"}"
-                      @click="${this.handleActionClick}"
-                      icon="mdi:volume-minus"
-                      title="Volume Down"
-                    ></paper-icon-button>
-                    <paper-icon-button
-                      .action="${"volume_up"}"
-                      @click="${this.handleActionClick}"
-                      icon="mdi:volume-plus"
-                      title="Volume Up"
-                    ></paper-icon-button>
-                  </div>
-                `
-              : ""
-          }
         </div>
+
+        <div class="row">
+
+          <paper-icon-button
+            .action="${"c3"}"
+            @click="${this.handleActionClick}"
+            icon="mdi:numeric-3"
+            title="3"
+          ></paper-icon-button>
+        </div>
+        
       </ha-card>
     `;
   }
@@ -253,21 +128,7 @@ class TVCardServices extends LitElement {
       "power",
       "volume_up",
       "volume_down",
-      "volume_mute",
-      "back",
-	  "source",
-      "info",
-      "home",
-	  "channelup",
-	  "channeldown",
-      "up",
-      "left",
-      "select",
-      "right",
-      "down",
-      "reverse",
-      "play",
-	  "forward"
+      "c3",
     ];
 
     if (
