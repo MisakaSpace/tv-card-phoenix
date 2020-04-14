@@ -13,7 +13,7 @@ class TVCardServices extends LitElement {
   }
 
 //  static async getConfigElement() {
-//    await import("./tv-card-editor.js");
+//    await import("./tv-card-phoenix-editor.js");
 //    return document.createElement("tv-card-editor");
 //  }
 
@@ -337,4 +337,4 @@ class TVCardServices extends LitElement {
   }
 }
 
-customElements.define("tv-card", TVCardServices);
+customElements.define("tv-card-phoenix", TVCardServices);
