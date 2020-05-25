@@ -46,35 +46,34 @@ class TVCardServices extends LitElement {
         <div class="row"></div>
         
         <div class="row">
-          <paper-icon-button 
+          <ha-icon-button 
             .action="${"power"}" 
             @click="${this.handleActionClick}" 
             icon="mdi:power"
             title="Power"
-          ></paper-icon-button>
-          <paper-icon-button
+          ></ha-icon-button>
+          <ha-icon-button
             .action="${"volume_down"}"
             @click="${this.handleActionClick}"
             icon="mdi:volume-medium"
             title="Volume -"
-          ></paper-icon-button>
-          <paper-icon-button
+          ></ha-icon-button>
+          <ha-icon-button
             .action="${"volume_up"}"
             @click="${this.handleActionClick}"
             icon="mdi:volume-high"
             title="Volume +"
-          ></paper-icon-button>
+          ></ha-icon-button>
 
         </div>
 
         <div class="row">
-
-          <paper-icon-button
+          <ha-icon-button
             .action="${"c3"}"
             @click="${this.handleActionClick}"
             icon="mdi:numeric-3"
             title="3"
-          ></paper-icon-button>
+          ></ha-icon-button>
         </div>
         
       </ha-card>
@@ -99,10 +98,11 @@ class TVCardServices extends LitElement {
           padding: 16px 0px 16px 0px;
         }
         img,
-        paper-icon-button {
+        ha-icon-button {
           width: 64px;
           height: 64px;
           cursor: pointer;
+           --mdc-icon-size: 100%;
         }
         .row {
           display: flex;
